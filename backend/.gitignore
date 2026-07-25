@@ -1,2 +1,7 @@
 node_modules
 hashPwd.js
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
