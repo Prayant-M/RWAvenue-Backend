@@ -1,0 +1,38 @@
+{
+  "name": "school-mgmt-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "setup:env": "node scripts/setup-env.js",
+    "predev": "node scripts/setup-env.js",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "node ./src/server.js",
+    "dev:client": "npm run dev --prefix frontend",
+    "start": "node ./src/server.js",
+    "build:client": "npm run build --prefix frontend",
+    "postinstall": "node scripts/setup-env.js && npm install --prefix frontend",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "argon2": "^0.40.3",
+    "axios": "^1.4.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-async-handler": "^1.2.0",
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.12.0",
+    "request": "^2.88.2",
+    "resend": "^4.0.0",
+    "sqlite3": "^5.1.7",
+    "uuid": "^10.0.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.3"
+  }
+}
